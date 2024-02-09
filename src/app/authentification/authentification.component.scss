@@ -1,0 +1,31 @@
+.auth-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden; /* Pour masquer tout contenu qui dépasse */
+}
+
+.left-section,
+.right-section {
+  height: 100%; /* Hauteur maximale */
+  background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+  background-position: center; /* Centrer l'image */
+}
+
+.left-section {
+  background-image: url("../../assets/images/carte.gif");
+  background-size: contain; /* Ajuster la taille de l'image pour qu'elle s'adapte à la section */
+  flex: 1; /* Left-section prendra 1/3 de l'espace */
+}
+
+.right-section {
+  background-image: url("../../assets/images/acceuil.png");
+  background-size: 80%; /* Réduire la taille de l'image à 80% */
+  background-repeat: no-repeat;
+  background-position: center;
+  flex: 2; /* Right-section prendra 2/3 de l'espace */
+}
+
+body {
+  overflow: hidden; /* Annule le défilement de la page entière */
+}

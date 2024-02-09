@@ -1,0 +1,55 @@
+.configuration-container {
+  padding: 20px;
+}
+
+/* Style pour le titre */
+div[title="Configuration"] {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Style pour l'image PDF */
+.img-pdf {
+  width: 50px; /* Taille de l'image */
+  padding-right: 100%;
+  cursor: pointer;
+}
+
+/* Style pour le tableau */
+
+.table-container {
+  max-height: 400px; /* Hauteur maximale du conteneur */
+  overflow-y: auto; /* Activation du défilement vertical lorsque nécessaire */
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Style pour l'en-tête du tableau */
+.table th {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style pour les cellules du tableau */
+.table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style pour les lignes impaires du tableau */
+.table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.title {
+  padding: 2%;
+  font-size: 50px;
+  font-weight: bold;
+}

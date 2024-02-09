@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3 text-center">
+        <h1 class="title" style="display: inline-block;">Configuration</h1>
+        <img src="../../assets/images/retour.png"
+            style="width: 50px; height: auto; display: inline-block; float: right; margin-right: 0px; margin-top: 10px;"
+            routerLink="/acceuil">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <!-- Bouton pour sélectionner un fichier -->
+        <label for=""> Importer Fichier Des Employes </label>
+        <label for="fileInput">
+            <img src="../../assets/images/piece-jointe.png" style="width: 50px; height: auto;" alt="PDF Icon">
+        </label>
+        <input id="fileInput" type="file" class="form-control-file" (change)="readFile($event)" accept=".xls,.xlsx,.csv"
+            style="display: none;">
+    </div>
+    <div class="col-md-3">
+        <!-- Champ pour afficher la date système -->
+        <input type="date" class="form-control" [(ngModel)]="currentDate">
+    </div>
+    <div class="col-md-3">
+        <div class="rapport">
+            <!-- Image cliquable pour générer le rapport PDF -->
+            <img src="../../assets/images/pdf.png" (click)="generateRapportPDF()" alt="PDF Icon">
+            <!-- Bouton pour réinitialiser le stockage local -->
+            <button class="btn btn-danger" (click)="resetLocalStorage()">Reset</button>
+        </div>
+    </div>
+</div>
+<div class="table">
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Code</th>
+                <th>Autorisation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Boucle pour afficher les données -->
+            <tr *ngFor="let employee of employees">
+                <td>{{ employee.nom }}</td>
+                <td>{{ employee.code }}</td>
+                <td>{{ employee.autorisation }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
